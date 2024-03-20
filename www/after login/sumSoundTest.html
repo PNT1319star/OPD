@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>Сложная сенсомоторная реакция на слуховой сигнал</title>
+    <style>
+        .right-align {
+            float: right; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headerpage">
+        <button class="back-button" onclick="location.href='test2.html'">Назад</button>
+    </div>
+    <div>
+        <ul>
+            <li><a href="index2.html">Главная</a></li>
+            <li><a href="list_expert2.html">Эксперты</a></li>
+            <li><a href="../php/list_profess.php">Профессия</a></li>
+            <li><a href="test2.html">Тестированиe</a></li>
+            <li class="right-align"><a href="../before login/test.html">Выйти</a> 
+        </ul>
+
+    </div>
+    <div>sitplace</div>
+    <div>sitplace</div>
+    <h1>Сложная сенсомоторная реакция на второсигнальные (цифровые) сигналы</h1>
+    <button class="instructions-button" onclick="openModalW()">Инструкция</button>
+    <p>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <!-- <span onclick="closeModalW()">&times</span> -->
+            <h2>Инструкция</h2>
+            <p>
+                Для начала теста, нажмите кнопку "Начать". <br>
+                Вы услышите два числа, ваша задача сложить их и определить, является
+                ли результат четным или нечетным. Нажмите соответствующую кнопку, чтобы выбрать ответ.<br>
+                Вы можете повторить тест несколько раз, чтобы улучшить свой результат.
+            </p>
+        </div>
+    </div>
+    <p>Сложите числа и выберите результат!</p>
+    <progress id="progress" value="0" max="100"></progress>
+    <p>
+    <button class="start" onclick="testStart()">Начать</button>
+    <p>
+    <div id="question"></div>
+    <button class="odd" onclick="answerCheck('нечетное')">Нечетное</button>
+    <button class="even" onclick="answerCheck('четное')">Четное</button>
+    <p>
+    <div id="result"></div>
+    <p>
+    <div id="average"></div>
+    <div id="sound"></div>
+
+    <form id="sendForm">
+        <input type="hidden" name="test_name" id="test_name" value="Сложение (текст)">
+        <input type="hidden" name="avg_time" id="avg_time">
+        <input type="hidden" name="total_time" id="total_time">
+        <input type="hidden" name="correct" id="correct">
+        <input type="hidden" name="misses" id="misses">
+        <input type="hidden" name="score" id="score">
+        <input id="submit-button" type="submit" value="Submit" style="display: none;">
+    </form>
+
+    <script src="../js/sendTestResult.js"></script>
+    <script src="../js/sumSoundTest.js"></script>
+    <script src="../js/modalWindowController.js"></script>
+</body>
+
+</html>

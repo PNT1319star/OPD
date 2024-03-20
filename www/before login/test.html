@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестированиe</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <style>
+        .right-align {
+            float: right; 
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+        }
+        .test-box {
+            flex: 0 0 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="headerpage"></div>
+    <div>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="list_expert.html">Эксперты</a></li>
+            <li><a href="../php/list_profess.php">Профессия</a></li>
+            <li><a href="test.html">Тестированиe</a></li>
+            <li class="right-align"><a href="../registration.html">Войти</a> 
+        </ul>
+    </div>
+    <div class="sitplace"></div>
+    <h1>Тесты</h1>
+    <main> 
+        <div class="test-box">
+            <div class="test-title">Реакция на звук</div>
+            <div class="test-icon">🔊</div>
+            <button class="instructions-button" onclick="openModalW()">Пройти</button>
+            <p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalW()">&times</span>
+                    <p>
+                        Вы должны войти, чтобы иметь возможность пройти этот тест!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="test-box">
+            <div class="test-title">Реакция на свет (простая)</div>
+            <div class="test-icon">🎆</div>
+            <button class="instructions-button" onclick="openModalW()">Пройти</button>
+            <p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalW()">&times</span>
+                    <p>
+                        Вы должны войти, чтобы иметь возможность пройти этот тест!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="test-box">
+            <div class="test-title">Реакция на свет (сложная)</div>
+            <div class="test-icon">🎆</div>
+            <button class="instructions-button" onclick="openModalW()">Пройти</button>
+            <p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalW()">&times</span>
+                    <p>
+                        Вы должны войти, чтобы иметь возможность пройти этот тест!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="test-box">
+            <div class="test-title">Реакция на цифровые сигналы</div>
+            <div class="test-icon">🧮</div>
+            <button class="instructions-button" onclick="openModalW()">Пройти</button>
+            <p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalW()">&times</span>
+                    <p>
+                        Вы должны войти, чтобы иметь возможность пройти этот тест!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="test-box">
+            <div class="test-title">РДО (простая)</div>
+            <div class="test-icon">🤾‍♀️</div>
+            <button class="instructions-button" onclick="openModalW()">Пройти</button>
+            <p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalW()">&times</span>
+                    <p>
+                        Вы должны войти, чтобы иметь возможность пройти этот тест!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="test-box">
+            <div class="test-title">РДО (сложная)</div>
+            <div class="test-icon">🤾‍♀️</div>
+            <button class="instructions-button" onclick="openModalW()">Пройти</button>
+            <p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalW()">&times</span>
+                    <p>
+                        Вы должны войти, чтобы иметь возможность пройти этот тест!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="test-box">
+            <div class="test-title">Аналоговое слежение</div>
+            <div class="test-icon">🕵️</div>
+            <button class="instructions-button" onclick="openModalW()">Пройти</button>
+            <p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalW()">&times</span>
+                    <p>
+                        Вы должны войти, чтобы иметь возможность пройти этот тест!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/modalWindowController.js"></script>
+</body>
+</html>

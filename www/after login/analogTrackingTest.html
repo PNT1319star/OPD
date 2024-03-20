@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>Аналоговое слежение</title>
+    <style>
+        .right-align {
+            float: right; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headerpage">
+        <button class="back-button" onclick="location.href='test2.html'">Назад</button>
+    </div>
+    <div>
+        <ul>
+            <li><a href="index2.html">Главная</a></li>
+            <li><a href="list_expert2.html">Эксперты</a></li>
+            <li><a href="../php/list_profess.php">Профессия</a></li>
+            <li><a href="test2.html">Тестированиe</a></li>
+            <li class="right-align"><a href="../before login/test.html">Выйти</a> 
+        </ul>
+    </div>
+    <div>sitplace</div>
+    <div>sitplace</div>
+    <h1>Аналоговое слежение</h1>
+    <button class="instructions-button" onclick="openModalW()">Инструкция</button>
+    <p>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Инструкция</h2>
+            <p>
+                Нажмите кнопку "Начать".Розовый шарик начнет двигаться по экрану влево и вправо. Ваша задача - при помощи кнопок "вправо" и "влево" удерживать шарик, как можно ближе к средней границе.
+            </p>
+        </div>
+    </div>
+    <p>Управляйте розовым шариком с помощью клавиш "влево" и "вправо", не давая ему отлететь от средней границы.</p>
+    <progress id="progress" value="0" max="30"></progress>
+    <p>
+    <div id="container">
+        <div id="ball"></div>
+        <div id="mark"></div>
+    </div>
+    <p>
+        <button id="start" >Начать</button>
+    <p>
+    <div id="reaction"></div>
+    <p>
+    <div id="scoreMy"></div>
+    <p>
+
+    <form id="sendForm">
+        <input type="hidden" name="test_name" id="test_name" value="Аналоговое слежение">
+        <input type="hidden" name="avg_time" id="avg_time">
+        <input type="hidden" name="total_time" id="total_time">
+        <input type="hidden" name="correct" id="correct">
+        <input type="hidden" name="misses" id="misses">
+        <input type="hidden" name="score" id="score">
+        <input id="submit-button" type="submit" value="Submit" style="display: none;">
+    </form>
+
+    <script src="../js/sendTestResult.js"></script>
+    <script src="../js/analogTrackTest.js"></script>
+    <script src="../js/modalWindowController.js"></script>
+</body>
+</html>

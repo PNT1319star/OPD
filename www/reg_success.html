@@ -1,0 +1,85 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Registration page</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="./css/reg_form_style.css" />
+<style>
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .toggle-btn {
+        margin: 0 10px; /* Điều chỉnh khoảng cách giữa các nút */
+    }
+    .right-align {
+        float: right; 
+    }
+</style>
+</head>
+<body>
+    <div class="headerpage"></div>
+    <div>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="list_expert.html">Эксперты</a></li>
+            <li><a href="list_profess.php">Профессия</a></li>
+            <li><a href="test.html">Тестированиe</a></li>
+            <li class="right-align"><a href="registration.html">Войти</a> 
+        </ul>
+    </div>
+    <div class="sitplace"></div>
+    <h2>Регистрация прошла успешно!</h2>
+    <body class="reg_form_body">
+        <div class="container">
+            <div class="tabs">
+                <div id="btn"></div>
+                <div class="buttons-container">
+                    <button type="button" class="toggle-btn" onclick="login()">Вход</button>
+                    <button type="button" class="toggle-btn" onclick="registration()">Регистрация</button>
+                </div>
+            </div>
+            <div class="social-icons" style="text-align: center;">
+                <h2>Добро пожаловать!</h2>
+            </div>
+        
+            <form id="login" class="form" method="post" action="./php/login.php">
+                <input type="text" class="input-filed" name="username" placeholder="Имя пользователя">
+                <input type="text" class="input-filed" name="password" placeholder="Пароль">
+                <input type="checkbox" class="check-box"><span>Запомнить пароль</span>
+                <button type="submit" class="submit-btn" onclick="javascript: submitform();">Войти</button>
+            </form>
+        
+            <form id="register" class="form" method="post" action="./php/add_users.php">
+                <input type="text" class="input-filed" name="username" placeholder="Имя пользователя">
+                <input type="text" class="input-filed" name="password" placeholder="Пароль">
+                <input type="checkbox" class="check-box"><span>Я согласен с правилами и условиями</span>
+                <button type="submit" class="submit-btn" onclick="javascript: submitform();">Зарегистрироваться</button>
+            </form>
+        </div>
+        <script>
+            var logIn = document.getElementById("login");
+            var register = document.getElementById("register");
+            var button = document.getElementById("btn");
+        
+            function registration() {
+            logIn.style.left = "-400px";
+            register.style.left = "50px";
+            button.style.left = "110px";
+            }
+        
+            function login() {
+            logIn.style.left = "50px";
+            register.style.left = "450px";
+            button.style.left = "0";
+            }
+            function submitform()
+            {
+            document.register.submit();
+            }
+        </script>
+    </body>
+</body>
+</html>
