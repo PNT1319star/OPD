@@ -155,9 +155,17 @@ function getResult1() {
     const averageDistance1 = totalDistance1;
     totalDistance1 = 0;
     let accuracy;
+    let hasPassedFixedPoint1 = false;
     accuracy = 100 - (averageDistance1 / circleRadius * 100);
+    if (object1.x < fixedObject_x_1) {
+        hasPassedFixedPoint1 = true;
+    }
     if (accuracy < 0) {
         accuracy = 0;
+    } else {
+        if (hasPassedFixedPoint1) {
+            accuracy *= -1;
+        }
     }
     result1 = result1 + accuracy;
     totalAccuracy1 += accuracy;
@@ -174,9 +182,17 @@ function getResult2() {
     const averageDistance2 = totalDistance2;
     totalDistance2 = 0;
     let accuracy;
+    let hasPassedFixedPoint2;
     accuracy = 100 - (averageDistance2 / circleRadius * 100);
+    if (object2.x < fixedObject_x_2) {
+        hasPassedFixedPoint2 = true;
+    }
     if (accuracy < 0) {
         accuracy = 0;
+    } else {
+        if (hasPassedFixedPoint2) {
+            accuracy *= -1;
+        }
     }
     result2 = result2 + accuracy;
     totalAccuracy2 += accuracy;
@@ -193,9 +209,17 @@ function getResult3() {
     const averageDistance1 = totalDistance3;
     totalDistance3 = 0;
     let accuracy;
+    let hasPassedFixedPoint3 = false;
     accuracy = 100 - (averageDistance1 / circleRadius * 100);
+    if (object3.x < fixedObject_x_3) {
+        hasPassedFixedPoint3 = true;
+    }
     if (accuracy < 0) {
         accuracy = 0;
+    } else {
+        if (hasPassedFixedPoint3) {
+            accuracy *= -1;
+        }
     }
     result3 = result3 + accuracy;
     totalAccuracy3 += accuracy;

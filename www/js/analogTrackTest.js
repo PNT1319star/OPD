@@ -88,6 +88,7 @@ function startMovingBall() {
         reactionValues.push(reaction.toFixed(2));
         reactionT.innerText = `Скорость реакции на изменение движения шарика: ${reactionValues[reactionValues.length - 1]} с/шарик`;
     });
+
     function calculateHitPercentage(progress) {
         if ( progress.value <= 30) {
         const deviation = Math.abs(currentPosition + ball.offsetWidth / 2 - mark.offsetLeft - mark.offsetWidth / 2 + mark.offsetWidth / 2 - ball.offsetWidth / 2);
@@ -101,10 +102,13 @@ function startMovingBall() {
     setInterval(() => {
         calculateHitPercentage(progress);
     }, 2000);
+
     setTimeout(() => {
         clearInterval(moveBallInterval);
         clearInterval(randomDirectionInterval);
         startButton.style.display = "block";
+        startButton.disabled = false;
+        
         const reactionAverage = reactionValues.reduce((acc, val) => acc + Number(val), 0) / reactionValues.length;
         const deviationAverage = deviationValues.reduce((acc, val) => acc + Number(val), 0) / deviationValues.length;
         reactionT.innerText = `Средняя скорость реакции на изменение движения шарика: ${reactionAverage.toFixed(2)} с/шарик`;
@@ -117,11 +121,12 @@ function startMovingBall() {
         //sendForm
         centerStartButton();
     }, 30000);
+
+    const centerStartButton = () => {
+        const containerWidth = document.documentElement.clientWidth;
+        const buttonWidth = startButton.offsetWidth;
+        const leftMargin = (containerWidth - buttonWidth) / 2;
+        startButton.style.marginLeft = leftMargin + "px";
+    };
 }
-const centerStartButton = () => {
-    const containerWidth = document.documentElement.clientWidth;
-    const buttonWidth = startButton.offsetWidth;
-    const leftMargin = (containerWidth - buttonWidth) / 2;
-    startButton.style.marginLeft = leftMargin + "px";
-};
 startButton.addEventListener("click", startMovingBall);

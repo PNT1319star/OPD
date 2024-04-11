@@ -56,18 +56,29 @@ function spacePress() {
     showResult();
 }
 
+
 function showResult() {
     const average = totalDistance;
     totalDistance = 0;
     let matchPercent;
+    let hasPassedFixedPoint = false;
+    if (point.x < pointX) {
+        hasPassedFixedPoint = true;
+    }
     matchPercent = 100 - (average / circleRadius * 100);
     if (matchPercent < 0) {
         matchPercent = 0;
         resultDiv.innerText = `Ваш процент попадания: ${matchPercent.toFixed(2)}%`;
         result = result + matchPercent;
     } else {
+        if (hasPassedFixedPoint) {
+            matchPercent *= -1;
+            resultDiv.innerText = `Ваш процент попадания: ${matchPercent.toFixed(2)}%`;
+            result = result + matchPercent;
+        } else {
         resultDiv.innerText = `Ваш процент попадания: ${matchPercent.toFixed(2)}%`;
         result = result + matchPercent;
+        }
     }
     let answer;
     if (count === 10) {

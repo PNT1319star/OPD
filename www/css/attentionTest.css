@@ -1,0 +1,59 @@
+#word {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+button#red,button#green,button#blue,button#orange,button#yellow,button#pink,button#purple, button#white, button#black, button#start,
+button.instructions-button{
+    background-color: rgb(248, 129, 208);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    border-radius: 40px;
+}
+
+
+button#start:hover,button#red:hover,button#green:hover,button#purple:hover, button#white:hover, button#black:hover ,button#blue:hover,button#orange:hover,button#yellow:hover,button#pink:hover,
+button.instructions-button:hover, button.back-button:hover{
+    background-color: rgba(240, 124, 215, 0.84);
+}
+
+button#red,button#green,button#blue,button#orange,button#yellow,button#pink,button#purple, button#white, button#black{
+    width: 170px;
+    margin: 10px 5px;
+    height: 70px;
+    font-size: 20px;
+    
+}
+button#red:hover{
+    background-color: rgba(255, 21, 0, 0.683);
+}
+button#green:hover{
+    background-color: rgba(78, 110, 4, 0.655);
+}
+button#blue:hover{
+    background-color: rgba(71, 90, 188, 0.574);
+}
+button#orange:hover{
+    background-color: rgba(201, 100, 12, 0.751);
+}
+button#yellow:hover{
+    background-color: rgba(238, 241, 60, 0.751);
+}
+button#pink:hover{
+    background-color: rgba(189, 96, 160, 0.719);
+}
+button#purple:hover{
+    background-color: rgba(137, 15, 218, 0.719);
+}
+button#white:hover{
+    background-color: rgba(255, 255, 255, 0.719);
+}
+button#black:hover{
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
