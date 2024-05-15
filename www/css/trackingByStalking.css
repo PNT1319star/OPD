@@ -41,6 +41,7 @@ button.instructions-button:hover, button.back-button:hover{
 }
 
 .result {
+    color: white;
     margin-top: 10px;
     font-size: 20px;
 }

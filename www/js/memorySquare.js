@@ -44,15 +44,15 @@ class Result {
 }
 
 class SquareBase {
-    constructor(circle, startButton, resultLabel, progressBar, amount) {
-        this.circle = circle
+    constructor(squares, startButton, resultLabel, progressBar, amount) {
+        this.squares = squares
         this.startButton = startButton
         this.resultLabel = resultLabel
         this.progressBar = progressBar
         this.amount = amount
         
-        this.baseColor = circle[0].style.backgroundColor
-        this.colors = ["red", "yellow", "green"]
+        this.baseColor = squares[0].style.backgroundColor
+        this.colors = ["red", "yellow", "blue"]
 
         this.reset()
     }
@@ -148,8 +148,9 @@ class SquareBase {
 		}, time)
 	}
 
+    //square methods
     resetColors() {
-        for (let i = 0; i < this.circle.length; i++) {
+        for (let i = 0; i < this.squares.length; i++) {
             this.changeSquareColor(i, this.baseColor)
         }
     }
@@ -159,7 +160,7 @@ class SquareBase {
     }
 
     changeSquareColor(index, color) {
-        this.circle[index].style.backgroundColor = color
+        this.squares[index].style.backgroundColor = color
     }
 
     checkCurrentSquare() {
@@ -167,14 +168,14 @@ class SquareBase {
     }
 
     checkSquare(index) {
-        return this.circle[index].style.backgroundColor !== this.baseColor
+        return this.squares[index].style.backgroundColor !== this.baseColor
     }
 
     nextSquare() {
-        return (this.curSquare + 1) % this.circle.length
+        return (this.curSquare + 1) % this.squares.length
     }
 
     nextRandomSquare() {
-        return getRandomInt(0, this.circle.length)
+        return getRandomInt(0, this.squares.length)
     }
 }

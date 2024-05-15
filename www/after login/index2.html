@@ -8,10 +8,38 @@
         .right-align {
             float: right; 
         }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+        }
+        .test-box {
+            flex: 0 0 45%;
+            position: relative; 
+        }
+        .test-wrapper {
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div class="headerpage"></div>
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
     <div>
         <ul>
             <li><a href="index2.html">Главная</a></li>

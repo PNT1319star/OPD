@@ -11,25 +11,52 @@
         .right-align {
             float: right; 
         }
+        .left-align {
+            float: left;
+            margin-right: 10px;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+        }
+        .test-box {
+            flex: 0 0 45%;
+            position: relative; 
+        }
+        .test-wrapper {
+            position: absolute; /* Vị trí tuyệt đối so với test-box */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
-    <div class="headerpage">
-        <button class="back-button" onclick="location.href='test2.html'">Назад</button>
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
     </div>
     <div>
-        <ul>
-            <li><a href="index2.html">Главная</a></li>
-            <li><a href="list_expert2.html">Эксперты</a></li>
-            <li><a href="../php/list_profess.php">Профессия</a></li>
-            <li><a href="test2.html">Тестированиe</a></li>
-            <li class="right-align"><a href="../before login/test.html">Выйти</a> 
-        </ul>
-
+        <a class="left-align" href="index2.html"><button>Главная</button></a>
+        <a class="left-align" href="list_expert2.html"><button>Эксперты</button></a>
+        <a class="left-align" href="test2.html"><button>Тестированиe</button></a>
+        <a class="right-align" href="../before login/test.html"><button>Выйти</button></a>
     </div>
-    <div>sitplace</div>
-    <div>sitplace</div>
+    <button class="back-button" onclick="location.href='test2.html'">Назад</button>
+    <div class="sitplace"></div>    
+    <div class="sitplace"></div>
     <h1>Сложная сенсомоторная реакция на второсигнальные (цифровые) сигналы</h1>
     <button class="instructions-button" onclick="openModalW()">Инструкция</button>
     <p>
@@ -45,15 +72,15 @@
             </p>
         </div>
     </div>
+    <div class="sitplace"></div>
     <p>Сложите числа и выберите результат!</p>
     <progress id="progress" value="0" max="100"></progress>
     <p>
     <button class="start" onclick="testStart()">Начать</button>
-    <p>
     <div id="question"></div>
     <button class="odd" onclick="answerCheck('нечетное')">Нечетное</button>
     <button class="even" onclick="answerCheck('четное')">Четное</button>
-    <p>
+    <div class="sitplace"></div>    
     <div id="result"></div>
     <p>
     <div id="highAverage"></div>

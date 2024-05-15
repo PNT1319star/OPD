@@ -44,6 +44,7 @@ button.start:hover, button.back-button:hover{
   }
   
   .result {
+    color: white;
     margin-top: 20px;
   }
   

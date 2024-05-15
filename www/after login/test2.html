@@ -9,6 +9,10 @@
         .right-align {
             float: right; 
         }
+        .left-align {
+            float: left;
+            margin-right: 10px;
+        }
         main {
             display: flex;
             flex-wrap: wrap;
@@ -16,6 +20,18 @@
         }
         .test-box {
             flex: 0 0 45%;
+            position: relative; 
+        }
+        .test-wrapper {
+            position: absolute; /* Vị trí tuyệt đối so với test-box */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         a {
             text-decoration: none;
@@ -23,83 +39,109 @@
     </style>
 </head>
 <body>
-    <div class="headerpage"></div>
-    <div>
-        <ul>
-            <li><a href="index2.html">Главная</a></li>
-            <li><a href="list_expert2.html">Эксперты</a></li>
-            <li><a href="../php/list_profess.php">Профессия</a></li>
-            <li><a href="test2.html">Тестированиe</a></li>
-            <li class="right-align"><a href="../before login/test.html">Выйти</a> 
-        </ul>
-    </div>
+<div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+</div>
+<div>
+    <a class="left-align" href="index2.html"><button>Главная</button></a>
+    <a class="left-align" href="list_expert2.html"><button>Эксперты</button></a>
+    <a class="left-align" href="test2.html"><button>Тестированиe</button></a>
+    <a class="right-align" href="../before login/test.html"><button>Выйти</button></a>
+</div>
+
     <div class="sitplace"></div>
     <div class="listTema">
         <h1>Тесты</h1>
     </div>
-    <p>
-    <main>
-        <div class="test-box">
+    <div class="sitplace"></div>
+    <div class="card-container">
+
+        <a href="soundTest.html">
+        <div class="card">
             <div class="test-title">Реакция на звук (простая)</div>
             <div class="test-icon">🔊</div>
-            <a href="soundTest.html" class="test-button">Пройти</a>
         </div>
-        <div class="test-box">
+        </a>
+        
+        <a href="sumSoundTest.html">
+        <div class="card">
             <div class="test-title">Реакция на звук (сложная)</div>
             <div class="test-icon">🔊</div>
-             <a href="sumSoundTest.html" class="test-button">Пройти</a>
         </div>
-        <div class="test-box">
+        </a>
+        
+        <a href="lightSquares.html">
+        <div class="card">
             <div class="test-title">Реакция на свет (простая)</div>
             <div class="test-icon">🎆</div>
-            <a href="lightSquares.html" class="test-button">Пройти</a>
         </div>
-        <div class="test-box">
+        </a>
+        
+        <a href="colorSquares.html">
+        <div class="card">
             <div class="test-title">Реакция на свет (сложная)</div>
             <div class="test-icon">🎆</div>
-            <a href="colorSquares.html" class="test-button">Пройти</a>
         </div>
-        <div class="test-box">
-            <div class="test-title">Реакция на цифровые сигналы (визуально)</div>
-            <div class="test-icon">🧮</div>
-             <a href="sumTest.html" class="test-button">Пройти</a>
-        </div>
-        <div class="test-box">
-            <div class="test-title">РДО (простая)</div>
-            <div class="test-icon">🤾‍♀️</div>
-             <a href="movingObj.html" class="test-button">Пройти</a>
-        </div>
-        <div class="test-box">
-            <div class="test-title">РДО (сложная)</div>
-            <div class="test-icon">🤾‍♀️</div>
-             <a href="movingObjectTest.html" class="test-button">Пройти</a>
-        </div>
-        <div class="test-box">
-            <div class="test-title">Аналоговое слежение</div>
-            <div class="test-icon">🕵️</div>
-             <a href="analogTrackingTest.html" class="test-button">Пройти</a>
-        </div>
-        <div class="test-box">
-            <div class="test-title">Аналоговое преследование</div>
-            <div class="test-icon">🕵️</div>
-             <a href="trackingByStalking.html" class="test-button">Пройти</a>
-        </div>
-        <div class="test-box">
-            <div class="test-title">Внимание</div>
-            <div class="test-icon">🫵</div>
-             <a href="attentionTest.html" class="test-button">Пройти</a>
-        </div>
-        <div class="test-box">
-            <div class="test-title">Память</div>
-            <div class="test-icon">🧠</div>
-             <a href="memoryTest.html" class="test-button">Пройти</a>
-        </div>
-        <div class="test-box">
-            <div class="test-title">Мышление</div>
-            <div class="test-icon">💭</div>
-             <a href="thoughtTest.html" class="test-button">Пройти</a>
-        </div>
+        </a>
         
-    </main>
+        <a href="sumTest.html">
+            <div class="card">
+                <div class="test-title">Реакция на цифровые сигналы (визуально)</div>
+                <div class="test-icon">🧮</div>
+            </div>
+        </a>
+        
+        <a href="movingObj.html">
+            <div class="card">
+                <div class="test-title">РДО (простая)</div>
+                <div class="test-icon">🤾‍♀️</div>
+            </div>
+        </a>
+        
+        <a href="movingObjectTest.html">
+            <div class="card">
+                <div class="test-title">РДО (сложная)</div>
+                <div class="test-icon">🤾‍♀️</div>
+            </div>
+        </a>
+        
+        <a href="analogTrackingTest.html">
+            <div class="card">
+                <div class="test-title">Аналоговое слежение</div>
+                <div class="test-icon">🕵️</div>
+            </div>
+        </a>
+        
+        <a href="trackingByStalking.html">
+            <div class="card">
+                <div class="test-title">Аналоговое преследование</div>
+                <div class="test-icon">🕵️</div>
+            </div>
+        </a>
+        
+        <a href="attentionTest.html">
+            <div class="card">
+                <div class="test-title">Внимание</div>
+                <div class="test-icon">🫵</div>
+            </div>
+        </a>
+        
+        <a href="memoryTest.html">
+            <div class="card">
+                <div class="test-title">Память</div>
+                <div class="test-icon">🧠</div>
+            </div>
+        </a>
+        
+        <a href="thoughtTest.html">
+            <div class="card">
+                <div class="test-title">Мышление</div>
+                <div class="test-icon">💭</div>
+            </div>
+        </a>  
+    </div>
 </body>
 </html>
